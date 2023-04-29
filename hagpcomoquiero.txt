@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desplazar imagen</title>
+    <style>
+        #imagen {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+        function MoverArriba() {
+            var imagen = document.getElementById("imagen");
+            var currentTop = parseInt(imagen.style.top) || 0;
+            imagen.style.top = (currentTop - 10) + "px";
+        }
+
+        function MoverAbajo() {
+            var imagen = document.getElementById("imagen");
+            var currentTop = parseInt(imagen.style.top) || 0;
+            imagen.style.top = (currentTop + 10) + "px";
+        }
+
+        function MoverIzquierda() {
+            var imagen = document.getElementById("imagen");
+            var currentLeft = parseInt(imagen.style.left) || 0;
+            imagen.style.left = (currentLeft - 10) + "px";
+        }
+
+        function MoverDerecha() {
+            var imagen = document.getElementById("imagen");
+            var currentLeft = parseInt(imagen.style.left) || 0;
+            imagen.style.left = (currentLeft + 10) + "px";
+        }
+    </script>
+</head>
+<body>
+    <img id="imagen" src="michi.jpg" alt="Imagen" />
+    <button onclick="MoverArriba()">Arriba</button>
+    <button onclick="MoverAbajo()">Abajo</button>
+    <button onclick="MoverIzquierda()">Izquierda</button>
+    <button onclick="MoverDerecha()">Derecha</button>
+</body>
+</html>
